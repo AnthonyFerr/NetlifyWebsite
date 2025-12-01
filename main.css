@@ -1,0 +1,8 @@
+body {
+    background-color: darkslategray;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px
+}
