@@ -1,8 +1,47 @@
+* {
+    box-sizing: border-box;
+}
 body {
+    margin: 0px;
     background-color: darkslategray;
+    font-family:'Trebuchet MS';
 }
 
 footer {
     position: fixed;
     bottom: 0px
 }
+
+header {
+    background-color:azure;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    font-size: 30px
+}
+
+/*
+Inside of the header, I want to have my name. In order to style that alone,
+I can use span. Span is like a div, used for styling, but this does only for inline elements. 
+Since this sort of element occurs only once, avoid using tags like <p>, which have meaning. Span doesn't.
+I will also access it by ID (#), since it is unique. 
+*/
+
+#name_header {
+
+}
+
+#links_header {
+    display: flex;
+    column-gap: 60px;
+    text-decoration: none;
+}
+
+#links_header a { 
+    text-decoration: none;
+    color: inherit;
+}
+
