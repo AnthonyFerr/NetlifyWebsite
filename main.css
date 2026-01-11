@@ -3,7 +3,8 @@
 }
 body {
     margin: 0px;
-    background-color: darkslategray;
+    background-color: rgb(30, 30, 30);
+    color: white;
     font-family:'Trebuchet MS';
 }
 
@@ -14,6 +15,7 @@ footer {
 
 header {
     background-color:azure;
+    color: black;
     display: flex;
     justify-content: space-between;
     margin: 0px;
@@ -30,9 +32,6 @@ Since this sort of element occurs only once, avoid using tags like <p>, which ha
 I will also access it by ID (#), since it is unique. 
 */
 
-#name_header {
-
-}
 
 #links_header {
     display: flex;
@@ -45,3 +44,11 @@ I will also access it by ID (#), since it is unique.
     color: inherit;
 }
 
+.intro h1 {
+    text-align: center;
+}
+
+#main { 
+    margin-left: 2%;
+    margin-right: 2%;
+}
