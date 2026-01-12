@@ -52,3 +52,8 @@ I will also access it by ID (#), since it is unique.
     margin-left: 2%;
     margin-right: 2%;
 }
+
+.emails a {
+    color: inherit;
+}
+
