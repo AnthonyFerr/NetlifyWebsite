@@ -33,13 +33,13 @@ I will also access it by ID (#), since it is unique.
 */
 
 
-#links_header {
+.links_header {
     display: flex;
     column-gap: 60px;
     text-decoration: none;
 }
 
-#links_header a { 
+.links_header a { 
     text-decoration: none;
     color: inherit;
 }
