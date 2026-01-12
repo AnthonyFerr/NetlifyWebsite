@@ -63,12 +63,22 @@ I will also access it by ID (#), since it is unique.
     text-align: center;
 }
 
-.projects h2 { 
+.project {
+    margin-bottom: 2.5rem;
+}
+
+.project h2 { 
     display: flex;
     justify-content: space-between;
     font-size: 3vh;
+    margin-bottom: 1rem;
 }
 
-.projDate {
+.sectDate {
     font-style: italic;
+}
+
+.experience h2 {
+    display: flex;
+    justify-content: space-between;
 }
