@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        #quote {
+            max-width: 720px;
+            padding: 2rem;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            font-size: 1.5rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="quote">Loading quote…</div>
+
+    <script>
+        async function loadRandomQuote() {
+            try {
+                const response = await fetch('./quotes.txt');
+                if (!response.ok) throw new Error('Could not load quotes.txt');
+                const text = await response.text();
+                const quotes = text
+                    .split(/\r?\n/)
+                    .map(line => line.trim())
+                    .filter(line => line.length);
+                if (!quotes.length) throw new Error('No quotes found');
+                const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+                document.getElementById('quote').textContent = randomQuote;
+            } catch (error) {
+                document.getElementById('quote').textContent = 'Unable to load a quote.';
+                console.error(error);
+            }
+        }
+
+        loadRandomQuote();
+    </script>
+</body>
+</html>
